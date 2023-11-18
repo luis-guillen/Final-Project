@@ -5,7 +5,7 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import dacd.guillen.model.Location;
-import dacd.guillen.model.WeatherData;
+import dacd.guillen.model.Weather;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -26,9 +26,9 @@ public class OpenWeatherMapProvider implements WeatherProvider {
     }
 
     @Override
-    public List<WeatherData> getWeather() {
+    public List<Weather> getWeather() {
         List<Location> canaryIslands = getCanaryIslands();
-        List<WeatherData> weatherDataList = new ArrayList<>();
+        List<Weather> weatherList = new ArrayList<>();
 
         for (Location island : canaryIslands) {
             String url = String.format(TEMPLATE_URL, island.getLat(), island.getLon(), apiKey);
@@ -57,7 +57,7 @@ public class OpenWeatherMapProvider implements WeatherProvider {
                         JsonObject weather = forecast.getAsJsonArray("weather").get(0).getAsJsonObject();
                         JsonObject wind = forecast.getAsJsonObject("wind");
 
-                        WeatherData weatherData = new WeatherData(
+                        Weather weatherData = new Weather(
                                 main.getAsJsonPrimitive("temp").getAsDouble(),
                                 0,  // Placeholder for rain probability
                                 main.getAsJsonPrimitive("humidity").getAsDouble(),
@@ -69,7 +69,7 @@ public class OpenWeatherMapProvider implements WeatherProvider {
                                 weather.getAsJsonPrimitive("icon").getAsString()
                         );
 
-                        weatherDataList.add(weatherData);
+                        weatherList.add(weatherData);
                     }
                 }
 
@@ -78,7 +78,7 @@ public class OpenWeatherMapProvider implements WeatherProvider {
             }
         }
 
-        return weatherDataList;
+        return weatherList;
     }
 
     private List<Location> getCanaryIslands() {

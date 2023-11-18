@@ -1,5 +1,5 @@
 package dacd.guillen.control;
-import dacd.guillen.model.WeatherData;
+import dacd.guillen.model.Weather;
 
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -23,11 +23,11 @@ public class WeatherController {
     }
 
     private void updateWeather() {
-        List<WeatherData> weatherDataList = weatherProvider.getWeather();
-        for (WeatherData weatherData : weatherDataList) {
+        List<Weather> weatherList = weatherProvider.getWeather();
+        for (Weather weather : weatherList) {
             try (Connection connection = weatherStore.getConnection()) {
-                weatherStore.createTableIfNotExists(connection, weatherData.getLocation().getName());
-                weatherStore.saveWeather(connection, weatherData.getLocation().getName(), weatherData);
+                weatherStore.createTableIfNotExists(connection, weather.getLocation().getName());
+                weatherStore.saveWeather(connection, weather.getLocation().getName(), weather);
             } catch (SQLException e) {
                 e.printStackTrace();
             }

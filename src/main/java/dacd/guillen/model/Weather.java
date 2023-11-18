@@ -1,7 +1,7 @@
 package dacd.guillen.model;
 import java.time.Instant;
 
-public class WeatherData {
+public class Weather {
     private double temp;
     private double rain;
     private double humidity;
@@ -12,7 +12,7 @@ public class WeatherData {
     private String weatherDescription;
     private String weatherIcon;
 
-    public WeatherData(double temp, double rainProbability, double humidity, double cloudiness, double windSpeed, Location location, Instant instant, String weatherDescription, String weatherIcon) {
+    public Weather(double temp, double rainProbability, double humidity, double cloudiness, double windSpeed, Location location, Instant instant, String weatherDescription, String weatherIcon) {
         this.temp = temp;
         this.rain = rainProbability;
         this.humidity = humidity;

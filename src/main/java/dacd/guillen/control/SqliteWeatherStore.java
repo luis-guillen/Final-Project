@@ -1,6 +1,6 @@
 package dacd.guillen.control;
 
-import dacd.guillen.model.WeatherData;
+import dacd.guillen.model.Weather;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -42,19 +42,19 @@ public class SqliteWeatherStore implements WeatherStore {
     }
 
     @Override
-    public void saveWeather(Connection connection, String tableName, WeatherData weatherData) throws SQLException {
+    public void saveWeather(Connection connection, String tableName, Weather weather) throws SQLException {
         tableName = tableName.replaceAll("[^a-zA-Z0-9]", "_");
 
         String insertDataQuery = "INSERT OR REPLACE INTO \"" + tableName + "\" (instant, temperature, rain_probability, humidity, clouds, wind_speed) "
                 + "VALUES (?, ?, ?, ?, ?, ?);";
 
         try (PreparedStatement insertDataStatement = connection.prepareStatement(insertDataQuery)) {
-            insertDataStatement.setString(1, weatherData.getInstant().toString());
-            insertDataStatement.setDouble(2, weatherData.getTemp());
-            insertDataStatement.setDouble(3, weatherData.getRainProbability());
-            insertDataStatement.setDouble(4, weatherData.getHumidity());
-            insertDataStatement.setDouble(5, weatherData.getCloudiness());
-            insertDataStatement.setDouble(6, weatherData.getWindSpeed());
+            insertDataStatement.setString(1, weather.getInstant().toString());
+            insertDataStatement.setDouble(2, weather.getTemp());
+            insertDataStatement.setDouble(3, weather.getRainProbability());
+            insertDataStatement.setDouble(4, weather.getHumidity());
+            insertDataStatement.setDouble(5, weather.getCloudiness());
+            insertDataStatement.setDouble(6, weather.getWindSpeed());
             insertDataStatement.executeUpdate();
         } catch (SQLException e) {
                 e.printStackTrace();
