@@ -5,16 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="df5faf67-9342-467e-8f50-23403b459b8b" name="Changes" comment="Fifth commit: minor model changes">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/event-source-builder/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/0124dcd8-3e31-4c4c-99aa-a34ba7d750a4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/0124dcd8-3e31-4c4c-99aa-a34ba7d750a4.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/03b7f645-ed60-48cc-a83d-85689a9229bb.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/03b7f645-ed60-48cc-a83d-85689a9229bb.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/1d4939a0-951b-4371-a254-ef9cb85f86d2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/1d4939a0-951b-4371-a254-ef9cb85f86d2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/2bd57df9-e8b2-457d-99bf-e0c78eb968cb.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/2bd57df9-e8b2-457d-99bf-e0c78eb968cb.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6a2867c2-a0c6-4304-9a64-3e136bb537df.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/6a2867c2-a0c6-4304-9a64-3e136bb537df.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/904fc4e9-12e9-4dc5-8de0-862f002c67b8.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/904fc4e9-12e9-4dc5-8de0-862f002c67b8.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a0b5a4b1-48c0-4f46-ab80-08b43bc3016e.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/a0b5a4b1-48c0-4f46-ab80-08b43bc3016e.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/be987d74-0e29-407b-9746-31d7ad078ca8.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/be987d74-0e29-407b-9746-31d7ad078ca8.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c3018048-0292-49db-834d-5f8c824649a7.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c3018048-0292-49db-834d-5f8c824649a7.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dacd/guillen/control/OpenWeatherMapProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dacd/guillen/control/OpenWeatherMapProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dacd/guillen/control/SqliteWeatherStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dacd/guillen/control/SqliteWeatherStore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dacd/guillen/control/WeatherController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dacd/guillen/control/WeatherController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dacd/guillen/control/WeatherProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dacd/guillen/control/WeatherProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dacd/guillen/control/WeatherStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dacd/guillen/control/WeatherStore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dacd/guillen/model/WeatherData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dacd/guillen/model/Weather.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/weather_data.db" beforeDir="false" afterPath="$PROJECT_DIR$/weather_data.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,11 +43,15 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
+    "jdk.selected.JAVA_MODULE": "corretto-17",
     "last_opened_file_path": "C:/Users/LuisG/Desktop/Cuarto Curso/1er Semestre/DACD/java exs/Practica1lgv4/weather_data.db",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -79,7 +87,8 @@
       <workItem from="1700339633950" duration="3068000" />
       <workItem from="1700342717976" duration="31000" />
       <workItem from="1700342801676" duration="122000" />
-      <workItem from="1700342984098" duration="2707000" />
+      <workItem from="1700342984098" duration="5852000" />
+      <workItem from="1700570521661" duration="1188000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -113,7 +122,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700346367407</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Fifth commit: minor model changes">
+      <option name="closed" value="true" />
+      <created>1700347021630</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1700347021630</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
