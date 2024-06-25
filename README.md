@@ -1,6 +1,8 @@
 Claro, aquí tienes el README adaptado con el nombre "CanaryTripPlanner":
 
 # CanaryTripPlanner Final Project
+ ![Badge Finished](https://img.shields.io/badge/STATUS-Terminado-green)
+
 
 ### University
 University of Las Palmas de Gran Canaria
@@ -34,7 +36,7 @@ The project follows the principles of **Clean Architecture**, ensuring a separat
 
 - **Clean Architecture**: Centralizes the business logic and domain models, with all dependencies directed towards the core. This allows for easy modifications and enhancements, such as changing the message broker.
   
-  ![Clean_Architecture](/images/CleanArchitecture.png)
+![image](https://github.com/luis-guillen/Final-Project/assets/129759843/445095c0-887b-4abb-ba40-2b2619900dd1)
 
 - **Repository Pattern**: Used in the Business Unit for efficient data handling and CRUD operations. This pattern abstracts the data layer, making the code more testable and maintainable.
 
@@ -49,7 +51,8 @@ The project follows the principles of **Clean Architecture**, ensuring a separat
 ### Arguments and Environment Variables
 
 To run the project, specific arguments and environment variables need to be set:
-
+- **Program Arguments**: 
+  - predictionProvider must be set and then run with a custom run configuration apiKey, defined in the project.
 - **Program Arguments**: 
   - `rootDirectory`: The root directory for storing and accessing data.
   Example:
