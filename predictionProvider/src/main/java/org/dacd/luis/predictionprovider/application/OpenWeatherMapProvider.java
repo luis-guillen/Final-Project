@@ -2,6 +2,7 @@ package org.dacd.luis.predictionprovider.application;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import org.apache.hc.client5.http.classic.methods.HttpGet;
 import org.apache.hc.client5.http.impl.classic.CloseableHttpClient;
@@ -75,7 +76,7 @@ public class OpenWeatherMapProvider implements WeatherProvider {
         String formattedTime = dateTime.format(timeFormatter);
 
         if ("12:00:00".equals(formattedTime)) {
-            Instant instant = Instant.now();
+            Instant.now();
             double humidity = getValueFromJson(jsonObject, "main", "humidity").orElseThrow(() -> new IllegalArgumentException("Missing humidity value"));
             double temperature = getValueFromJson(jsonObject, "main", "temp").orElseThrow(() -> new IllegalArgumentException("Missing temperature value"));
             double precipitation = getValueFromJson(jsonObject, "rain", "3h").orElse(0.0);
@@ -92,6 +93,6 @@ public class OpenWeatherMapProvider implements WeatherProvider {
     private Optional<Double> getValueFromJson(JsonObject jsonObject, String objectKey, String valueKey) {
         return Optional.ofNullable(jsonObject.getAsJsonObject(objectKey))
                 .map(obj -> obj.get(valueKey))
-                .map(jsonElement -> jsonElement.getAsDouble());
+                .map(JsonElement::getAsDouble);
     }
 }
