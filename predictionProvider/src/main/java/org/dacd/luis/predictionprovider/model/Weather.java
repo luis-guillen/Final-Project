@@ -3,19 +3,15 @@ package org.dacd.luis.predictionprovider.model;
 import java.time.Instant;
 
 public class Weather {
-    private Instant ts;
-    private String ss;
-    private double humidity;
-    private double temperature;
-    private double precipitation;
-    private double clouds;
-    private double windSpeed;
-    private Location location;
-    private Instant predictionTime;
+    private final double humidity;
+    private final double temperature;
+    private final double precipitation;
+    private final double clouds;
+    private final double windSpeed;
+    private final Location location;
+    private final Instant predictionTime;
 
-    public Weather(Instant ts, String ss, double humidity, double temperature, double precipitation, double clouds, double windSpeed, Location location, Instant predictionTime) {
-        this.ts = ts;
-        this.ss = ss;
+    public Weather(double humidity, double temperature, double precipitation, double clouds, double windSpeed, Location location, Instant predictionTime) {
         this.humidity = humidity;
         this.temperature = temperature;
         this.precipitation = precipitation;

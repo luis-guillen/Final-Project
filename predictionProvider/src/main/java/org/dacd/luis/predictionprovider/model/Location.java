@@ -11,27 +11,12 @@ public class Location {
         this.longitude = longitude;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public double getLat() {
         return lat;
-    }
-
-    public void setLat(double lat) {
-        this.lat = lat;
     }
 
     public double getLongitude() {
         return longitude;
     }
 
-    public void setLongitude(double longitude) {
-        this.longitude = longitude;
-    }
 }

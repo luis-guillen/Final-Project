@@ -23,7 +23,7 @@ public class WeatherApplication {
             List<Weather> weatherList = openWeatherMapProvider.getWeatherData(location);
             Instant instant = Instant.now();
             for (Weather weather : weatherList) {
-                Weather event = new Weather(instant, "prediction-provider", weather.getHumidity(), weather.getTemperature(),
+                Weather event = new Weather(weather.getHumidity(), weather.getTemperature(),
                         weather.getPrecipitation(), weather.getClouds(), weather.getWindSpeed(), weather.getLocation(), weather.getPredictionTime());
                 publisher.publish(event);
             }

@@ -82,7 +82,7 @@ public class OpenWeatherMapProvider implements WeatherProvider {
             double clouds = getValueFromJson(jsonObject, "clouds", "all").orElseThrow(() -> new IllegalArgumentException("Missing clouds value"));
             double windSpeed = getValueFromJson(jsonObject, "wind", "speed").orElseThrow(() -> new IllegalArgumentException("Missing wind speed value"));
 
-            Weather weather = new Weather(instant, "prediction-provider", humidity, temperature, precipitation, clouds, windSpeed, location, dateTime.toInstant(ZoneId.systemDefault().getRules().getOffset(dateTime)));
+            Weather weather = new Weather(humidity, temperature, precipitation, clouds, windSpeed, location, dateTime.toInstant(ZoneId.systemDefault().getRules().getOffset(dateTime)));
             return Optional.of(weather);
         }
 
