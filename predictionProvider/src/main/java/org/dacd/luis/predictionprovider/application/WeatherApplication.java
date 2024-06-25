@@ -21,7 +21,7 @@ public class WeatherApplication {
     public void execute() {
         for (Location location : locations) {
             List<Weather> weatherList = openWeatherMapProvider.getWeatherData(location);
-            Instant instant = Instant.now();
+            Instant.now();
             for (Weather weather : weatherList) {
                 Weather event = new Weather(weather.getHumidity(), weather.getTemperature(),
                         weather.getPrecipitation(), weather.getClouds(), weather.getWindSpeed(), weather.getLocation(), weather.getPredictionTime());

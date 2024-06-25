@@ -8,14 +8,16 @@ public class SubscriberActiveMQ implements Subscriber {
     private final String brokerUrl;
     private final String clientId;
     private final String subscriberId;
-    private final EventStore eventStoreManager; // Asegúrate de usar la interfaz correcta
+    private final EventStore eventStoreManager;
+    private final String rootDirectory; // Añadir variable para el directorio raíz
     private Connection connection;
 
-    public SubscriberActiveMQ(String brokerUrl, String clientId, String subscriberId, EventStore eventStoreManager) {
+    public SubscriberActiveMQ(String brokerUrl, String clientId, String subscriberId, EventStore eventStoreManager, String rootDirectory) {
         this.brokerUrl = brokerUrl;
         this.clientId = clientId;
         this.subscriberId = subscriberId;
         this.eventStoreManager = eventStoreManager;
+        this.rootDirectory = rootDirectory; // Inicializar variable
     }
 
     @Override
@@ -78,7 +80,7 @@ public class SubscriberActiveMQ implements Subscriber {
 
     private void handleIncomingMessage(Message message, String topicName) throws JMSException {
         if (message instanceof TextMessage textMessage) {
-            eventStoreManager.storeEventToFile(textMessage.getText(), topicName);
+            eventStoreManager.storeEventToFile(textMessage.getText(), topicName, rootDirectory); // Pasar directorio raíz
         } else {
             System.err.println("Unrecognized message: " + message.getClass().getName());
         }

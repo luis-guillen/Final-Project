@@ -2,6 +2,7 @@ package org.dacd.luis.eventstore.application;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
+
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
@@ -13,12 +14,12 @@ import java.time.format.DateTimeFormatter;
 public class EventStoreManager implements EventStore {
 
     @Override
-    public void storeEventToFile(String json, String topicName) {
+    public void storeEventToFile(String json, String topicName, String rootDirectory) {
         try {
             Gson gson = new Gson();
             JsonObject jsonObject = gson.fromJson(json, JsonObject.class);
             String formattedTimestamp = getCurrentFormattedTimestamp();
-            File directory = createDirectory(jsonObject,topicName);
+            File directory = createDirectory(jsonObject, topicName, rootDirectory);
             File file = new File(directory, formattedTimestamp + ".events");
             writeEventToFile(gson, jsonObject, file);
         } catch (IOException e) {
@@ -31,8 +32,8 @@ public class EventStoreManager implements EventStore {
         return Instant.now().atOffset(ZoneOffset.UTC).format(formatter);
     }
 
-    private File createDirectory(JsonObject jsonObject, String topicName) throws IOException {
-        String directoryPath = "datalake/eventstore/" + topicName + "/" + getCleanedStringValue(jsonObject) + "/";
+    private File createDirectory(JsonObject jsonObject, String topicName, String rootDirectory) throws IOException {
+        String directoryPath = rootDirectory + "/datalake/eventstore/" + topicName + "/" + getCleanedStringValue(jsonObject) + "/";
         File directory = new File(directoryPath);
         if (!directory.exists() && !directory.mkdirs()) {
             throw new IOException("Error creating directory: " + directory.getAbsolutePath());
@@ -53,6 +54,6 @@ public class EventStoreManager implements EventStore {
     }
 
     private void handleError(Exception e) {
-        System.err.println("Error handling event" + ": " + e.getMessage());
+        System.err.println("Error handling event: " + e.getMessage());
     }
 }
