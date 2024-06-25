@@ -1,7 +1,7 @@
 Claro, aquí tienes el README adaptado con el nombre "CanaryTripPlanner":
 
 # CanaryTripPlanner Final Project
- ![Badge Finished](https://img.shields.io/badge/STATUS-Terminado-green)
+![image](https://github.com/luis-guillen/Final-Project/assets/129759843/1ac975de-824c-4512-89e6-d7abc07d9ca2)
 
 
 ### University
