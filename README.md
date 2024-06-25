@@ -1,4 +1,6 @@
-# Canary Islands Travel Advisor Final Project
+Claro, aquí tienes el README adaptado con el nombre "CanaryTripPlanner":
+
+# CanaryTripPlanner Final Project
 
 ### University
 University of Las Palmas de Gran Canaria
@@ -17,7 +19,7 @@ Data Science Application Development
 
 ## Project Overview
 
-The Canary Islands Travel Advisor project is designed to provide personalized travel recommendations based on weather conditions and hotel availability. It utilizes a modular architecture to ensure flexibility, scalability, and ease of maintenance. The key functionalities include:
+The CanaryTripPlanner project is designed to provide personalized travel recommendations based on weather conditions and hotel availability. It utilizes a modular architecture to ensure flexibility, scalability, and ease of maintenance. The key functionalities include:
 
 - **Weather Data Analysis**: Integration with the OpenWeather API to retrieve and analyze weather forecasts.
 - **Hotel Data Management**: Collection and processing of hotel availability and pricing data.
@@ -53,3 +55,20 @@ To run the project, specific arguments and environment variables need to be set:
   Example:
   ```sh
   java -cp target/your-artifact.jar org.dacd.luis.eventstore.Main /path/to/rootDirectory
+  ```
+
+- **Environment Variables**:
+  - `ACTIVE_MQ_URL`: URL for the ActiveMQ broker (default: `tcp://localhost:61616`).
+  - `WEATHER_API_KEY`: API key for accessing the OpenWeather API.
+  
+### Example Environment Setup
+
+```sh
+export ACTIVE_MQ_URL=tcp://localhost:61616
+export WEATHER_API_KEY=your_openweather_api_key
+```
+
+Ensure these environment variables are set before running the application to enable proper configuration and connectivity to required services.
+
+This documentation should provide a clear and concise overview of the project, its design, and execution requirements.
+```
