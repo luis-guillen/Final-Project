@@ -50,7 +50,7 @@ The project follows the principles of **Clean Architecture**, ensuring a separat
 
 To run the project, specific arguments and environment variables need to be set:
 - **Program Arguments**: 
-  - predictionProvider must be set and then run with a custom run configuration apiKey, defined in the project.
+  - predictionProvider must be run with a custom run configuration apiKey, defined in the project.
 - **Program Arguments**: 
   - `rootDirectory`: The root directory for storing and accessing data.
   Example:
