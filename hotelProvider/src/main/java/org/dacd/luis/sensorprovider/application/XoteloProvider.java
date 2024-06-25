@@ -41,7 +41,7 @@ public class XoteloProvider implements HotelProvider {
         List<Rate> rates = new ArrayList<>();
         try {
             Gson gson = new Gson();
-        JsonObject rateResponse = gson.fromJson(responseBody, JsonObject.class);
+            JsonObject rateResponse = gson.fromJson(responseBody, JsonObject.class);
             JsonArray list = rateResponse.get("result").getAsJsonObject().get("rates").getAsJsonArray();
             list.forEach(jsonElement -> {
                 JsonObject jsonObject = jsonElement.getAsJsonObject();
