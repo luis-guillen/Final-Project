@@ -70,5 +70,41 @@ export WEATHER_API_KEY=your_openweather_api_key
 
 Ensure these environment variables are set before running the application to enable proper configuration and connectivity to required services.
 
-This documentation should provide a clear and concise overview of the project, its design, and execution requirements.
-```
+### Diagrams
+#### predictionProvider
+
+##### application
+![image](https://github.com/luis-guillen/Final-Project/assets/129759843/91025edd-4b96-4391-9b9e-518bf1943442)
+
+##### model
+![image](https://github.com/luis-guillen/Final-Project/assets/129759843/c6d681f7-bc22-428e-9ec7-f2e3fbfbf86e)
+
+
+
+#### datalakeBuilder
+
+##### application
+![image](https://github.com/luis-guillen/Final-Project/assets/129759843/944b43cf-f7de-40ec-9b18-e33c6e00d593)
+
+
+#### businessUnit
+
+##### application
+![image](https://github.com/luis-guillen/Final-Project/assets/129759843/7cf9993a-55dc-4413-a355-5762754a7c91)
+
+##### model
+![image](https://github.com/luis-guillen/Final-Project/assets/129759843/7a5786e4-dc68-4e28-9cfc-05fc7a0711ce)
+
+##### service
+![image](https://github.com/luis-guillen/Final-Project/assets/129759843/d18bd549-b6bb-49e6-8fc9-8e6fd8bfb076)
+
+
+#### hotelProvider
+
+##### application
+![image](https://github.com/luis-guillen/Final-Project/assets/129759843/adfd1121-28c4-4226-96aa-b9bb3441726c)
+
+##### model
+![image](https://github.com/luis-guillen/Final-Project/assets/129759843/e7707a01-c637-41ca-99d9-56de8e5a21f3)
+
+
