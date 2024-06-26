@@ -106,6 +106,6 @@ Ensure these environment variables are set before running the application to ena
 ![image](https://github.com/luis-guillen/Final-Project/assets/129759843/adfd1121-28c4-4226-96aa-b9bb3441726c)
 
 ### model
-![image](https://github.com/luis-guillen/Final-Project/assets/129759843/e7707a01-c637-41ca-99d9-56de8e5a21f3)
+![image](https://github.com/luis-guillen/Final-Project/assets/129759843/f37ce320-f455-4e90-8606-102cd32cbc01)
 
 
